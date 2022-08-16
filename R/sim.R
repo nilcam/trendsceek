@@ -17,7 +17,7 @@
 #' @export
 sim_pois <- function(lambda_int, win_len = 1){
     
-    pp = spatstat.core::rpoispp(lambda_int, win = spatstat.geom::owin(c(0, win_len), c(0, win_len)))
+    pp = spatstat.core::random(lambda_int, win = spatstat.geom::owin(c(0, win_len), c(0, win_len)))
 
     return(pp)
 }
